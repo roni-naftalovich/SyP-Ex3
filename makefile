@@ -2,7 +2,7 @@ CXX=clang++
 CXXFLAGS=-std=c++11 -Werror -Wsign-conversion -g
 VALGRIND_FLAGS=-v --leak-check=full --show-leak-kinds=all  --error-exitcode=99
 
-SOURCES=Demo.cpp KnightCard.cpp VictoryCard.cpp Monopoly.cpp YearOfPlentyCard.cpp Player.cpp Board.cpp Tile.cpp Vertex.cpp Edge.cpp
+SOURCES=Demo.cpp KnightCard.cpp VictoryCard.cpp Monopoly.cpp RoadBuilding.cpp YearOfPlentyCard.cpp Player.cpp Board.cpp Tile.cpp Vertex.cpp Edge.cpp
 OBJECTS=$(subst .cpp,.o,$(SOURCES))
 TEST_SOURCES=Test.cpp
 TEST_OBJECTS=$(subst .cpp,.o,$(TEST_SOURCES))

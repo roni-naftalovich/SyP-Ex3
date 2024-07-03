@@ -12,6 +12,7 @@
 #include "Monopoly.hpp"
 #include "VictoryCard.hpp"
 #include "YearOfPlentyCard.hpp"
+#include "RoadBuilding.hpp"
 #include <algorithm>
 #include <random> // for default_random_engine and random_device
 #include <chrono> // for system_clock
@@ -241,7 +242,7 @@ Board::Board(Player &player1, Player &player2, Player &player3)
         vertices[edgeMapping[i][1]].addEdge(&edges[i]);
     }
 
-    // Initialize the deck of 25 development cards: 14 knights, 5 victory points, 2 year of plenty, 2 monopoly
+    // Initialize the deck of 16 development cards: 3 knights, 5 victory points, 2 year of plenty, 2 monopoly, 2 road building
     for (int i = 0; i < 3; i++) {
         developmentCards.push_back(new KnightCard());
     }
@@ -253,6 +254,9 @@ Board::Board(Player &player1, Player &player2, Player &player3)
     }
     for (int i = 0; i < 2; i++) {
         developmentCards.push_back(new Monopoly());
+    }
+    for (int i = 0; i < 2; i++) {
+        developmentCards.push_back(new BuildingRoadsCard());
     }
 
     // Shuffle the deck
@@ -539,6 +543,7 @@ bool Board::canPlaceCity(int playerNum, size_t vertexIndex)
     vertex.setIsCity(true);
     return true;
 }
+
 
 void Board::initialPlacements() {
     for (Player* player : players) {

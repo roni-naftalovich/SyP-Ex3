@@ -4,6 +4,7 @@
 #include "KnightCard.hpp"
 #include "VictoryCard.hpp"
 #include "Monopoly.hpp"
+#include "RoadBuilding.hpp"
 #include "YearOfPlentyCard.hpp"
 #include "ResourceType.hpp"
 #include <iostream>
@@ -405,7 +406,23 @@ void Player::playDevelopmentCard(Board &board) {
         if (yearOfPlentyCard) {
             yearOfPlentyCard->play(*this);
         }
-    } else {
+    } else if (type == "Building Roads") {
+        BuildingRoadsCard* buildingRoadsCard = dynamic_cast<BuildingRoadsCard*>(card);
+        if (buildingRoadsCard) {
+            buildingRoadsCard->play(*this);
+            for (int i = 0; i < 2; ++i) {
+            int vertexIndex1, vertexIndex2;
+            bool flag= true;
+            while (flag) {
+            std::cout << "Enter the indices of the vertices to place the road between: ";
+            std::cin >> vertexIndex1 >> vertexIndex2;
+            if(board.canPlaceRoad(this->getSeqNum(), static_cast<size_t>(vertexIndex1), static_cast<size_t>(vertexIndex2))){
+                roads.push_back(board.getEdge(static_cast<size_t>(vertexIndex1), static_cast<size_t>(vertexIndex2)));
+                std::cout << "Player " << this->getName() << " placed a road between vertices " << vertexIndex1 << " and " << vertexIndex2 << std::endl;
+                flag= false;
+            }
+        }}}
+    }else {
         std::cout << "Unknown development card type: " << type << std::endl;
         return;
     }
