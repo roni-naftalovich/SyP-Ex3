@@ -1,3 +1,4 @@
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #include "Board.hpp"
 #include "Vertex.hpp"
 #include "Edge.hpp"

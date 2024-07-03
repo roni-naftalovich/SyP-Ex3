@@ -1,3 +1,4 @@
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #include "YearOfPlentyCard.hpp"
 #include <iostream>
 #include <map>

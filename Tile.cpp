@@ -1,4 +1,4 @@
-
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #include "Tile.hpp"
 
 Tile::Tile(ResourceType resource, int number, size_t seqNum)

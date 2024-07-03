@@ -1,3 +1,4 @@
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 #include "Board.hpp"

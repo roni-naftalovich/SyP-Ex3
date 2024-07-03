@@ -1,4 +1,5 @@
 // Monopoly.hpp
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #ifndef MONOPOLY_HPP
 #define MONOPOLY_HPP
 

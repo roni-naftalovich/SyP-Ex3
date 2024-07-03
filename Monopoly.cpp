@@ -1,4 +1,5 @@
 // Monopoly.cpp
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #include "Monopoly.hpp"
 #include "Edge.hpp"
 #include "Player.hpp"  

@@ -1,3 +1,4 @@
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #ifndef VERTEX_HPP
 #define VERTEX_HPP
 

@@ -1,4 +1,5 @@
 // ResourceType.hpp
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #ifndef RESOURCETYPE_HPP
 #define RESOURCETYPE_HPP
 

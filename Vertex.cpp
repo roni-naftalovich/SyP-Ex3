@@ -1,3 +1,4 @@
+// Roni Naftalovich 319049060, roni100400100400@gmail.com
 #include "Vertex.hpp"
 #include "ResourceType.hpp"
 #include "Tile.hpp"
